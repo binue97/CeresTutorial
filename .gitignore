@@ -1,0 +1,6 @@
+# Build objects
+build/
+
+# Thirdparty packages
+thirdparty/
+
