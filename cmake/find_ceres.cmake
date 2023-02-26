@@ -15,5 +15,6 @@ endif (CMAKE_BUILD_TYPE MATCHES "Release")
 
 # v1.14.0
 include_directories(${CERES_INCLUDE_DIRS})
+set(CERES_LIB ${CERES_LIBRARIES})
 
 message("[FIND_CERES] : Done adding external project : Ceres-Solver")
