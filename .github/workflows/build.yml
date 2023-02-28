@@ -15,11 +15,20 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout branch
+        uses: actions/checkout@v3
       
       - name: Ubuntu version
         run: lsb_release -a
-#     - uses: actions/checkout@v3
+
+      - name: Current path
+        run: pwd
+
+      - name: workflow path
+        run: echo ${GITHIB_REPOSIRTORY}
+        
+#       - name: workflow path
+#         run: echo ${GITHIB_REPOSIRTORY}
 
 #     - name: Configure CMake
 #       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
