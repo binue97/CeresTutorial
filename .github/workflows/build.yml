@@ -8,7 +8,7 @@ on:
 
 env:
   BUILD_TYPE: Release
-  
+  PWD: ${GITHUB_REPOSITORY}
 
 jobs:
   build:
@@ -24,8 +24,11 @@ jobs:
       - name: Current path
         run: pwd
 
+      - name: LS
+        run: ls -al
+
       - name: workflow path
-        run: echo ${GITHIB_REPOSIRTORY}
+        run: echo ${PWD}
         
 #       - name: workflow path
 #         run: echo ${GITHIB_REPOSIRTORY}
