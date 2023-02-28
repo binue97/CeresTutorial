@@ -30,10 +30,17 @@ jobs:
       - name: workflow path
         run: echo ${PWD}
 
+      - name: GTest
+        run: |
+          apt-get install libgtest-dev -y
+          apt-get install cmake -y
+
       - name: build directory
         run: |
           mkdir build && cd build
           cmake -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
           make
           
-      
+      - name: run unit test
+        run: |
+          ./unit_test
